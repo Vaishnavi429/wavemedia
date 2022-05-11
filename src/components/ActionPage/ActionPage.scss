@@ -1,0 +1,67 @@
+.actionPage__backgroundColor {
+    background-color: #004A7C;
+    border: none;
+}
+
+.input__group {
+    // margin-bottom: 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0 0 0 5px;
+    display: flex;
+    align-items: center;
+
+    .actionPage__inputIcon {
+        color: #ffffff !important;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        padding: 5px;
+        color: #C9CCD5;
+    }
+
+    ::placeholder {
+        color: #C9CCD5;
+    }
+}
+
+.modal-body {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    .actionPage__inputCheckbox {
+        cursor: pointer;
+    }
+    
+    .actionPage__submitBtn {
+        background-color: #93B5C6;
+        border: 2px solid #93B5C6;
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .actionPage__submitBtn:hover {
+        background-color: #93B5C6;
+        border: 2px solid #93B5C6;
+        box-shadow: 0 5px 10px black;
+    }
+}
+
+.actionPage__signBtn,
+.actionPage__closeBtn {
+    background: none;
+    border: none;
+    color: blue;
+    padding-left: 5px;
+}
+
+.actionPage__signBtn:hover,
+.actionPage__closeBtn:hover {
+    background: none;
+    border: none;
+    color: blue;
+}
