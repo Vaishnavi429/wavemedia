@@ -1,0 +1,75 @@
+.navbar {
+    background-color: #93B5C6 !important;
+
+}
+
+.NavbarContainer {
+    display: flex;
+}
+
+.brand {
+    color: black !important;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 600;
+}
+
+.SignBtn {
+    background-color: #004A7C !important;
+    border-radius: 20px;
+    max-width: 300px;
+    border: none;
+    cursor: pointer;
+}
+
+.SignBtn:hover {
+    background-color: #0d3352 !important;
+}
+
+.SearchBarContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #93B5C6;
+}
+
+.searchBar {
+    width: 400px !important;
+    border-radius: 20px !important;
+    background-color: #cae7fd !important;
+    height: 35px;
+    margin-top: -45px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.person-icon {
+    font-size: 30px !important;
+    color: #0d3352;
+}
+
+@media only screen and (max-width: 912px) {
+    .searchBar {
+        width: 300px !important;
+        margin-left: 40px !important;
+
+    }
+
+}
+
+@media only screen and (max-width :550px)
+{
+    .searchBar{
+    width: 120px !important;
+    margin-left: 38px !important;
+    margin-top: -43px;
+    height: 30px !important;
+   
+    
+
+    }
+    
+}

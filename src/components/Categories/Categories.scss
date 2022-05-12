@@ -1,0 +1,28 @@
+.Categories{
+    display: flex;
+    overflow-x: scroll; 
+
+}
+
+.Categories::-webkit-scrollbar {
+    display: none;
+}
+
+
+.Categories {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+.CategoriesBtn{
+    background-color: #004A7C !important;
+    margin: 10px 3px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+   
+
+}
+.CategoriesBtn:hover {
+    background-color: #0d3352 !important;
+  }
