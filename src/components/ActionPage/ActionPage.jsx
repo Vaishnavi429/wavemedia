@@ -6,9 +6,11 @@ import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded
 import HttpsRoundedIcon from '@mui/icons-material/HttpsRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
-const ActionPage = () => {
-    const [show, setShow] = useState(false);
-    const [haveAnAccount, setHaveAnAccount] = useState(false);
+const ActionPage = ({ showActionPage }) => {
+    // handling show action page
+    // const [show, setShow] = useState(false);
+    const [show, setShow] = showActionPage;
+    const [haveAnAccount, setHaveAnAccount] = useState(true);
     const [usersInformation, setUsersInformation] = useState([]);
     const [userData, setUserData] = useState({
         fullName: '',
@@ -85,6 +87,9 @@ const ActionPage = () => {
 
     const handleSignIn = () => {
         if (usersInformation.length > 0) {
+
+            let isLoggedIn = false;
+
             usersInformation.forEach((userInfo) => {
                 if (userInfo.email === userData.email && userInfo.password === userData.password) {
                     setUserData({
@@ -93,12 +98,15 @@ const ActionPage = () => {
                         password: '',
                         confirmPassword: '',
                     });
+                    isLoggedIn = true;
                     handleClose();
-                    alert("You are successfully logged in!")
-                } else {
-                    alert("Invalid Email and Password!");
+                    alert("You are successfully logged in!");
+                    return;
                 }
             })
+
+            if(!isLoggedIn) alert("Invalid Email and Password!");
+
         } else {
             alert("Invalid Email and Password!");
         }
@@ -106,11 +114,11 @@ const ActionPage = () => {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            {/* <Button variant="primary" onClick={handleShow}>
                 Sign Up
-            </Button>
+            </Button> */}
 
-            <Modal show={show} onHide={handleClose} className='actionPage__modal'>
+            <Modal show={show} onHide={handleClose} className='actionPage__modal' centered>
                 <Modal.Header className='actionPage__backgroundColor'>
                     <Modal.Title className='text-light'>{haveAnAccount ? 'Sign In' : 'Sign Up'}</Modal.Title>
                     <button className='actionPage__closeBtn' onClick={handleClose}>

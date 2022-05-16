@@ -23,8 +23,7 @@ const ShowArticle = () => {
     let postInfo = blogData.filter((data) => data.id === id);
 
     return (
-        <Container className=''>
-            <div className="container-fluid bg-dark py-3 text-light">Navbar</div>
+        <Container className='showArticle__mainContainer'>
             <Row className='mt-2'>
                 <Col xl={8} className='border rounded showArticle__showPost'>
                     <h3>{postInfo[0].title}</h3>
