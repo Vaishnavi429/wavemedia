@@ -5,10 +5,14 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search'
 import { BsPersonCircle } from "react-icons/bs";
+import ActionPage from '../ActionPage/ActionPage';
 
 
 import './NavbarComponent.scss'
-export default function NavbarComponent({ setShow }) {
+export default function NavbarComponent() {
+  // state for showing signup or signin form
+  const [show, setShow] = useState(false);
+  // const [show, setShow] = showActionPage;
   const [login, setLogin] = useState(false)
   const handleShow = () => setShow(true);
 
@@ -57,30 +61,30 @@ export default function NavbarComponent({ setShow }) {
   }));
 
   return (
-    <div >
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container className='NavbarContainer'>
-          <Navbar.Brand className='brand' as={Link} to='/' > WaveMedia</Navbar.Brand>
+    <>
+      <div >
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Container className='NavbarContainer'>
+            <Navbar.Brand className='brand' as={Link} to='/' >WaveMedia</Navbar.Brand>
 
-          <Nav>
-            {login ? <BsPersonCircle className='person-icon' /> : <Button className='SignBtn' onClick={handleShow}> Login</Button>}
-          </Nav>
-        </Container>
-      </Navbar>
-      <div className="SearchBarContainer">
-        <Search className='searchBar'>
-          <SearchIconWrapper>
-            <SearchIcon className='seacrchIcon' />
-          </SearchIconWrapper>
-          <StyledInputBase
-            placeholder="Search…"
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </Search>
-
-      </div>
-
-
-    </div >
+            <Nav>
+              {login ? <BsPersonCircle className='person-icon' style={{ cursor: 'pointer' }} onClick={() => { setLogin(false) }} /> : <Button className='SignBtn' onClick={handleShow}> Login</Button>}
+            </Nav>
+          </Container>
+        </Navbar>
+        <div className="SearchBarContainer">
+          <Search className='searchBar'>
+            <SearchIconWrapper>
+              <SearchIcon className='seacrchIcon' />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+        </div>
+      </div >
+      <ActionPage showActionPage={ [show, setShow] } setLogin={setLogin} />
+    </>
   )
 }

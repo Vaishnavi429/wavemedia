@@ -6,7 +6,7 @@ import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded
 import HttpsRoundedIcon from '@mui/icons-material/HttpsRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
-const ActionPage = ({ showActionPage }) => {
+const ActionPage = ({ showActionPage, setLogin }) => {
     // handling show action page
     // const [show, setShow] = useState(false);
     const [show, setShow] = showActionPage;
@@ -100,7 +100,8 @@ const ActionPage = ({ showActionPage }) => {
                     });
                     isLoggedIn = true;
                     handleClose();
-                    alert("You are successfully logged in!");
+                    setLogin(true);
+                    // alert("You are successfully logged in!");
                     return;
                 }
             })

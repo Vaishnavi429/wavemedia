@@ -15,8 +15,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavbarComponent setShow={setShow} />
-        <ActionPage showActionPage={[show, setShow]} />
+        <NavbarComponent showActionPage={[show, setShow]} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path=':id' element={<ShowArticle />} />
