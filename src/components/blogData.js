@@ -4,6 +4,7 @@ const blogData = [
         postImageUrl : 'https://cdn.pixabay.com/photo/2018/03/06/21/09/easter-3204589__340.jpg',
         title : 'Rabbits are a widespread group of squamate reptiles, with over',
         description : 'Rabbits are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+        content:{"blocks":[{"key":"5ngeh","text":"This doesn’t suggest that the BCCI is a puritan body of work. It too gets embroiled in controversies from time to time regarding its administrative structure and financial dealings. However, such issues have rarely impacted the performance of the team on the field. The Indian team currently stands amongst the most successful teams in international cricket. This would have been impossible without the systemic programme ingratiated and maintained by the BCCI.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}},
         reads : 5,
         time : 2,
         categories : ['wild life', 'animal', 'nature']
@@ -13,6 +14,7 @@ const blogData = [
         postImageUrl : 'https://cdn.pixabay.com/photo/2014/11/07/00/00/volleyball-520093__340.jpg   ',
         title : 'Athlete by nature, cheerleader by choice!',
         description : "Sports can, through casual or organized participation, improve one's physical health. Hundreds of sports exist, from those between single contestants, through to those",
+        content:{"blocks":[{"key":"5ngeh","text":"This doesn’t suggest that the BCCI is a puritan body of work. It too gets embroiled in controversies from time to time regarding its administrative structure and financial dealings. However, such issues have rarely impacted the performance of the team on the field. The Indian team currently stands amongst the most successful teams in international cricket. This would have been impossible without the systemic programme ingratiated and maintained by the BCCI.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}},
         reads : 0,
         time : 2,
         categories : ['sports']

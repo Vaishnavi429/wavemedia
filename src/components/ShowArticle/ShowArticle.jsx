@@ -5,6 +5,7 @@ import data from '../blogData';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import LatestPost from './LatestPost/LatestPost';
+import Preview from '../PreviewData/PreviewData';
 
 const ShowArticle = () => {
 
@@ -22,11 +23,13 @@ const ShowArticle = () => {
     const blogData = data();
     let postInfo = blogData.filter((data) => data.id === id);
 
+
     return (
         <Container className='showArticle__mainContainer'>
             <Row className='mt-2'>
                 <Col xl={8} className='border rounded showArticle__showPost'>
                     <h3>{postInfo[0].title}</h3>
+                    <Preview id= {id}/>
                 </Col>
                 <Col className='showArticle__sidebar'>
                     <Row xs={1} sm={1} md={1} xl={1} xxl={1}>
